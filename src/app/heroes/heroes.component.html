@@ -4,8 +4,7 @@
   <label for="new-hero">Hero name: </label>
   <input id="new-hero" #heroName />
 
-  <!-- (click) 入力値をadd()に渡したあと、入力をクリアする -->
-  <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+ <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
     Add hero
   </button>
 </div>
@@ -19,3 +18,7 @@
       (click)="delete(hero)">x</button>
   </li>
 </ul>
+
+<!-- List of Heroes: Displays a list of heroes using the *ngFor directive to iterate over the heroes array. 
+Each hero has a link to a detailed view (using Angular's routerLink) and a delete button that calls the delete() method when clicked, 
+removing the hero from the list. -->

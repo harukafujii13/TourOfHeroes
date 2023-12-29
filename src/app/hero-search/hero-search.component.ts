@@ -33,21 +33,21 @@ export class HeroSearchComponent implements OnInit {
 
   constructor(private heroService: HeroService) {}
 
-  // 検索語をobservableストリームにpushする
   search(term: string): void {
     this.searchTerms.next(term);
   }
 
   ngOnInit(): void {
     this.heroes$ = this.searchTerms.pipe(
-      // 各キーストロークの後、検索前に300ms待つ
       debounceTime(300),
 
-      // 直前の検索語と同じ場合は無視する
       distinctUntilChanged(),
 
-      // 検索語が変わる度に、新しい検索observableにスイッチする
       switchMap((term: string) => this.heroService.searchHeroes(term))
     );
   }
 }
+
+// debounceTime(300): Waits until there’s a pause in events for 300 milliseconds. This is useful for waiting until the user stops typing before sending a request.
+// distinctUntilChanged(): Ensures that the search is only performed if the term has changed.
+// switchMap((term: string) => this.heroService.searchHeroes(term)): Switches to a new search Observable each time the term changes. It cancels and discards previous search observables, returning only the latest search service Observable.

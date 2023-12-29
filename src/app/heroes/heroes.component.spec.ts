@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HeroesComponent } from './heroes.component';
 
 describe('HeroesComponent', () => {
@@ -20,3 +19,6 @@ describe('HeroesComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+//This part sets up a testing environment for the HeroesComponent using Angular's testing utilities.
+//It ensures the component can be created successfully.
