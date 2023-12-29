@@ -1,3 +1,5 @@
+<img width="1242" alt="TourOfHeroes" src="https://github.com/harukafujii13/TourOfHeroes/assets/111606615/22b45554-0884-4f3e-bc77-14697bd7f7c5">
+
 # Tour of Heroes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
