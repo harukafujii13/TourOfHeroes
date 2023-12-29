@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule, NgFor, NgIf, UpperCasePipe } from '@angular/common';
 import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 import { RouterModule } from '@angular/router';
+import { HeroSearchComponent } from '../hero-search/hero-search.component';
 
 @Component({
   standalone: true,
@@ -19,6 +20,7 @@ import { RouterModule } from '@angular/router';
     HeroDetailComponent,
     CommonModule,
     RouterModule,
+    HeroSearchComponent,
   ],
 })
 export class DashboardComponent implements OnInit {
